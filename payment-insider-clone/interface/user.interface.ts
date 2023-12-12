@@ -13,6 +13,7 @@ interface User extends Document {
   isAdmin: boolean;
   softDelete: boolean;
   createdAt: Date;
+  events: string[];
 }
 
 export default User;

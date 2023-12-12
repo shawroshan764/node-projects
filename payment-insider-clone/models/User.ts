@@ -11,6 +11,7 @@ const userSchema = new Schema<UserInterface>({
     gender: { type: String, enum: ['male', 'female'], required: true },
     city: { type: String, required: true },
     state: { type: String, required: true },
+    events: [{ type: Schema.Types.ObjectId, ref: 'Event' }], // Assuming you have an 'Event' model
     isAdmin: { type: Boolean, default: false },
     softDelete: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now },
