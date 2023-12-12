@@ -2,7 +2,7 @@
 
 import { Document } from 'mongoose';
 
-enum Language {
+export enum Language {
   English = 'English',
   Hindi = 'Hindi',
   Bengali = 'Bengali',
@@ -11,7 +11,7 @@ enum Language {
   Tamil = 'Tamil',
 }
 
-enum Category {
+export enum Category {
   ComedyShow = 'Comedy Show',
   Workshops = 'Workshops',
   MusicShow = 'Music Show',
