@@ -1,15 +1,10 @@
-// routes/index.ts
-
 import express, { Router } from 'express';
 import userRoutes from './userRoutes';
 import eventRoutes from './eventRoutes';
 
 const indexRouter: Router = express.Router();
+indexRouter.use('/users', userRoutes);
 
-// Use user routes under /api/users
-indexRouter.use('/api/users', userRoutes);
-
-// Use event routes under /api/events
-indexRouter.use('/api/events', eventRoutes);
+indexRouter.use('/events', eventRoutes);
 
 export default indexRouter;
